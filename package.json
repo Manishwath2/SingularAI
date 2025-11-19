@@ -1,0 +1,28 @@
+{
+  "name": "singulyn-ai",
+  "version": "0.1.0",
+  "private": true,
+  "description": "SingulynAI - Cognitive Super-App with Local-First Architecture",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=apps/web",
+    "build": "npm run build --workspace=apps/web",
+    "start": "npm run start --workspace=apps/web",
+    "lint": "npm run lint --workspace=apps/web",
+    "backend:dev": "cd backend && python3 main.py",
+    "backend:install": "cd backend && pip3 install -r requirements.txt"
+  },
+  "keywords": [
+    "ai",
+    "chat",
+    "local-first",
+    "nextjs",
+    "fastapi",
+    "langgraph"
+  ],
+  "author": "",
+  "license": "MIT"
+}
