@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+:root {
+  /* Midnight Neon Theme Colors */
+  --background: #050510;
+  --foreground: #ededed;
+  --primary: #00F0FF;
+  --secondary: #7B2CBF;
+  --accent: #FF006E;
+  --muted: #1a1a2e;
+  --border: rgba(0, 240, 255, 0.1);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-rajdhani);
+  
+  /* Neon Glow Effects */
+  --glow-primary: 0 0 20px rgba(0, 240, 255, 0.5), 0 0 40px rgba(0, 240, 255, 0.3);
+  --glow-secondary: 0 0 20px rgba(123, 44, 191, 0.5), 0 0 40px rgba(123, 44, 191, 0.3);
+  --glow-accent: 0 0 20px rgba(255, 0, 110, 0.5), 0 0 40px rgba(255, 0, 110, 0.3);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Glass Morphism Utility Classes */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-strong {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Neon Glow Utilities */
+.glow-primary {
+  box-shadow: var(--glow-primary);
+}
+
+.glow-secondary {
+  box-shadow: var(--glow-secondary);
+}
+
+.glow-accent {
+  box-shadow: var(--glow-accent);
+}
+
+.text-glow-primary {
+  text-shadow: var(--glow-primary);
+}
+
+.text-glow-secondary {
+  text-shadow: var(--glow-secondary);
+}
+
+.text-glow-accent {
+  text-shadow: var(--glow-accent);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary);
+}
